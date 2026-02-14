@@ -1,11 +1,34 @@
+import {
+  Ship,
+  CreditCard,
+  KeyRound,
+  Scale,
+  ShieldCheck,
+  Handshake,
+  Truck,
+  PhoneCall,
+  ClipboardList,
+  FileText,
+  Wallet,
+  Globe,
+  Radar,
+  Car,
+  CheckCircle2,
+  BadgeCheck,
+  Fuel,
+  TriangleAlert,
+  Flame,
+  MapPin,
+} from "lucide-react";
+
 export default function Home() {
   const brandLogos = [
-    { name: "Toyota", src: "/brands/toyota.png" },
-    { name: "Mercedes", src: "/brands/mercedes.png" },
-    { name: "BMW", src: "/brands/bmw.png" },
-    { name: "Nissan", src: "/brands/nissan.png" },
-    { name: "Audi", src: "/brands/audi.png" },
-    { name: "Land Rover", src: "/brands/landrover.png" },
+    { name: "Toyota", src: "/brands/toyota.webp" },
+    { name: "Mercedes", src: "/brands/mercedes.webp" },
+    { name: "BMW", src: "/brands/bmw.webp" },
+    { name: "Nissan", src: "/brands/nissan.webp" },
+    { name: "Audi", src: "/brands/audi.webp" },
+    { name: "Land Rover", src: "/brands/landrover.webp" },
   ];
 
   const categories = [
@@ -17,12 +40,24 @@ export default function Home() {
 
   return (
     <main className="bg-black text-white">
-      {/* HERO */}
+      {/* HERO with VIDEO */}
       <section className="relative min-h-[92vh] overflow-hidden">
-        <div className="absolute inset-0 bg-[url('/hero.jpg')] bg-cover bg-center" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/70 to-black" />
+        {/* Video background */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="metadata"
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
 
-        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-28 text-center">
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/70 to-black" />
+
+        <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-20 text-center">
           <p className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm text-white/80">
             Automotive excellence
           </p>
@@ -32,49 +67,81 @@ export default function Home() {
           </h1>
 
           <p className="mt-4 text-base md:text-lg text-white/75 max-w-3xl mx-auto">
-            We simplify car buying through transparent importation, flexible financing,
-            corporate rentals, in-country sourcing, and exclusive after-sales support in Tanzania.
+            We simplify car buying through transparent importation, flexible financing, corporate rentals,
+            in-country sourcing, and exclusive after-sales support in Tanzania.
           </p>
 
           <div className="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
             <a href="/services#car-importation" className="btn-primary">
               Get a Personalized Vehicle Quote
             </a>
-            <a href="/how-to-buy" className="btn-outline">
-              Begin Your Ownership Journey
+            <a href="/services#car-loans" className="btn-outline">
+              Apply Today & Drive Home
             </a>
           </div>
 
-          {/* INFORMATIVE QUICK CARDS (keep the Rally feel) */}
-          <div className="mx-auto max-w-5xl mt-10 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
+          {/* Informative Quick Cards */}
+          <div className="mx-auto max-w-5xl mt-12 grid grid-cols-1 md:grid-cols-3 gap-4 text-left">
             <div className="card-dark">
-              <p className="text-xs text-white/60">Car Importation</p>
-              <p className="mt-1 font-semibold">Transparent sourcing</p>
-              <p className="mt-1 text-sm text-white/70">Japan • Germany • Dubai • UK • USA</p>
-              <a href="/services#car-importation" className="mt-4 inline-block text-sm text-yellow-500 hover:underline">
+              <div className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-lg bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
+                  <Ship size={18} />
+                </span>
+                <div>
+                  <p className="text-xs text-white/60">Car Importation</p>
+                  <p className="font-semibold">Transparent sourcing</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-white/70">Japan • Germany • Dubai • UK • USA</p>
+              <a
+                href="/services#car-importation"
+                className="mt-4 inline-block text-sm text-yellow-500 hover:underline"
+              >
                 Get Quote →
               </a>
             </div>
+
             <div className="card-dark">
-              <p className="text-xs text-white/60">Car Loans</p>
-              <p className="mt-1 font-semibold">Drive home same day</p>
-              <p className="mt-1 text-sm text-white/70">2–4 years • No collateral</p>
-              <a href="/services#car-loans" className="mt-4 inline-block text-sm text-yellow-500 hover:underline">
+              <div className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-lg bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
+                  <CreditCard size={18} />
+                </span>
+                <div>
+                  <p className="text-xs text-white/60">Car Loans</p>
+                  <p className="font-semibold">Drive home same day</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-white/70">2–4 years • No collateral</p>
+              <a
+                href="/services#car-loans"
+                className="mt-4 inline-block text-sm text-yellow-500 hover:underline"
+              >
                 Apply Today →
               </a>
             </div>
+
             <div className="card-dark">
-              <p className="text-xs text-white/60">Car Rentals</p>
-              <p className="mt-1 font-semibold">Corporate & executives</p>
-              <p className="mt-1 text-sm text-white/70">Daily • Weekly • Long-term</p>
-              <a href="/services#car-rentals" className="mt-4 inline-block text-sm text-yellow-500 hover:underline">
+              <div className="flex items-center gap-3">
+                <span className="w-10 h-10 rounded-lg bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
+                  <KeyRound size={18} />
+                </span>
+                <div>
+                  <p className="text-xs text-white/60">Car Rentals</p>
+                  <p className="font-semibold">Corporate & executives</p>
+                </div>
+              </div>
+              <p className="mt-3 text-sm text-white/70">Daily • Weekly • Long-term</p>
+              <a
+                href="/services#car-rentals"
+                className="mt-4 inline-block text-sm text-yellow-500 hover:underline"
+              >
                 Secure Today →
               </a>
             </div>
           </div>
         </div>
 
-        {/* BIG FAINT TEXT */}
+        {/* Big faint text */}
         <div className="pointer-events-none absolute bottom-6 left-0 right-0 z-10 hidden md:block">
           <p className="text-[120px] font-black tracking-tight text-white/5 text-center">
             DRIVE SMART
@@ -114,7 +181,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CAR TYPE SECTION */}
+      {/* CAR TYPES */}
       <section className="bg-black py-16">
         <div className="mx-auto max-w-6xl px-6">
           <div className="flex items-end justify-between gap-6">
@@ -165,7 +232,7 @@ export default function Home() {
                 Learn About Smart Motorz
               </a>
               <a href="/contact" className="rounded-lg border border-black/20 px-6 py-3 font-semibold hover:border-black/40 transition">
-                Speak With a Smart Motorz Advisor
+                Speak With an Advisor
               </a>
             </div>
           </div>
@@ -177,18 +244,23 @@ export default function Home() {
           </div>
         </div>
 
-        {/* VALUE CARDS */}
+        {/* VALUE CARDS with icons */}
         <div className="mx-auto max-w-6xl px-6 pb-16">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
             {[
-              ["Transparency", "Clear pricing & full vehicle details—no hidden charges."],
-              ["Integrity", "Ethical standards and fairness in every transaction."],
-              ["Trust", "Reliable service, quality vehicles, long-term support."],
-              ["Delivery", "Doorstep delivery to any region in Tanzania."],
-            ].map(([t, d]) => (
+              { t: "Transparency", d: "Clear pricing & full vehicle details—no hidden charges.", Icon: Scale },
+              { t: "Integrity", d: "Ethical standards and fairness in every transaction.", Icon: ShieldCheck },
+              { t: "Trust", d: "Reliable service, quality vehicles, long-term support.", Icon: Handshake },
+              { t: "Delivery", d: "Doorstep delivery to any region in Tanzania.", Icon: Truck },
+            ].map(({ t, d, Icon }) => (
               <div key={t} className="rounded-xl border border-black/10 bg-white p-6">
-                <p className="font-semibold">{t}</p>
-                <p className="mt-2 text-sm text-black/70">{d}</p>
+                <div className="flex items-center gap-3">
+                  <span className="w-10 h-10 rounded-lg bg-yellow-500/15 border border-yellow-500/30 grid place-items-center text-yellow-700">
+                    <Icon size={18} />
+                  </span>
+                  <p className="font-semibold">{t}</p>
+                </div>
+                <p className="mt-3 text-sm text-black/70">{d}</p>
               </div>
             ))}
           </div>
@@ -234,53 +306,60 @@ export default function Home() {
       {/* HOW TO BUY + OFFERS */}
       <section className="bg-white text-black">
         <div className="mx-auto max-w-6xl px-6 py-20 grid grid-cols-1 lg:grid-cols-12 gap-10">
+          {/* HOW TO BUY - premium steps */}
           <div className="lg:col-span-6">
             <h3 className="text-3xl font-bold">How to Buy</h3>
-            <ol className="mt-6 space-y-4 text-black/75">
+            <p className="mt-3 text-black/70">A clear, guided process—from first message to handover.</p>
+
+            <div className="mt-8 space-y-4">
               {[
-                "Get in Touch via office, phone, WhatsApp, or email.",
-                "Choose the Right Car with our expert guidance.",
-                "Review Transparent Pricing (contract + proforma invoice).",
-                "Make Initial Payment: 60% deposit or 100% upfront.",
-                "We Handle Importation end-to-end.",
-                "Track Your Vehicle with weekly updates.",
-                "Vehicle Handover: collection or doorstep delivery.",
-                "Drive with Confidence: stress-free and fully handled.",
-              ].map((s, i) => (
-                <li key={i} className="flex gap-3">
-                  <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-yellow-500 font-bold">
-                    {i + 1}
+                { t: "Get in touch", d: "Visit, call, WhatsApp or email to start.", I: PhoneCall },
+                { t: "Private assessment", d: "We learn your budget, lifestyle, and preference.", I: ClipboardList },
+                { t: "Transparent quote", d: "Contract + proforma invoice with full breakdown.", I: FileText },
+                { t: "Initial payment", d: "60% deposit (or 100% for faster processing).", I: Wallet },
+                { t: "Sourcing & import", d: "We handle the entire importation end-to-end.", I: Globe },
+                { t: "Weekly tracking", d: "Shipping, clearing, registration, timeline updates.", I: Radar },
+                { t: "Handover", d: "Collection or doorstep delivery—your choice.", I: Car },
+                { t: "Drive with confidence", d: "After-sales support for our clients only.", I: CheckCircle2 },
+              ].map(({ t, d, I }) => (
+                <div key={t} className="flex gap-4 rounded-xl border border-black/10 bg-white p-4">
+                  <span className="w-11 h-11 rounded-xl bg-yellow-500/20 border border-yellow-500/35 grid place-items-center text-yellow-700 shrink-0">
+                    <I size={18} />
                   </span>
-                  <span>{s}</span>
-                </li>
+                  <div>
+                    <p className="font-semibold">{t}</p>
+                    <p className="text-sm text-black/70 mt-1">{d}</p>
+                  </div>
+                </div>
               ))}
-            </ol>
+            </div>
 
             <div className="mt-10">
-              <a href="/how-to-buy" className="rounded-lg bg-black text-white px-6 py-3 font-semibold hover:opacity-90 transition">
+              <a href="/contact" className="rounded-lg bg-black text-white px-6 py-3 font-semibold hover:opacity-90 transition">
                 Begin Your Ownership Journey
               </a>
             </div>
           </div>
 
+          {/* OFFERS */}
           <div className="lg:col-span-6">
             <h3 className="text-3xl font-bold">Offers Included</h3>
-            <p className="mt-3 text-black/70">
-              We go beyond the sale—here’s what you get with Smart Motorz.
-            </p>
+            <p className="mt-3 text-black/70">Extra value and essentials included—no surprises.</p>
 
             <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {[
-                "Insurance (BIMA)",
-                "Registration & Plate Number",
-                "Triangle",
-                "Fire Extinguisher",
-                "Full Tank",
-                "Delivery to Any Region",
-              ].map((o) => (
-                <div key={o} className="rounded-xl border border-black/10 bg-white p-5 flex gap-3">
-                  <span className="mt-1 h-2.5 w-2.5 rounded-full bg-yellow-500" />
-                  <p className="font-semibold">{o}</p>
+                { t: "Insurance (BIMA)", I: BadgeCheck },
+                { t: "Registration & Plate Number", I: FileText },
+                { t: "Triangle", I: TriangleAlert },
+                { t: "Fire Extinguisher", I: Flame },
+                { t: "Full Tank", I: Fuel },
+                { t: "Delivery to Any Region", I: MapPin },
+              ].map(({ t, I }) => (
+                <div key={t} className="rounded-xl border border-black/10 bg-white p-5 flex gap-3">
+                  <span className="mt-0.5 w-9 h-9 rounded-lg bg-yellow-500/20 border border-yellow-500/35 grid place-items-center text-yellow-700 shrink-0">
+                    <I size={16} />
+                  </span>
+                  <p className="font-semibold">{t}</p>
                 </div>
               ))}
             </div>

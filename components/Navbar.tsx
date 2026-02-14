@@ -3,13 +3,12 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, X, Instagram, Facebook, Youtube, Twitter } from "lucide-react";
 
 const nav = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
   { href: "/services", label: "Services" },
-  { href: "/how-to-buy", label: "How to Buy" },
-  { href: "/offers", label: "Offers" },
   { href: "/contact", label: "Contact" },
 ];
 
@@ -30,8 +29,8 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="Smart Motorz"
-            width={240}
-            height={90}
+            width={260}
+            height={100}
             priority
             className="h-10 w-auto object-contain"
           />
@@ -57,7 +56,7 @@ export default function Navbar() {
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
-            <span className="text-lg font-bold">≡</span>
+            <Menu size={20} />
           </button>
         </div>
       </div>
@@ -84,8 +83,8 @@ export default function Navbar() {
             <Image
               src="/logo.png"
               alt="Smart Motorz"
-              width={240}
-              height={90}
+              width={260}
+              height={100}
               className="h-10 w-auto object-contain"
             />
 
@@ -94,7 +93,7 @@ export default function Navbar() {
               onClick={() => setOpen(false)}
               aria-label="Close menu"
             >
-              ✕
+              <X size={18} />
             </button>
           </div>
 
@@ -110,24 +109,11 @@ export default function Navbar() {
               </Link>
             ))}
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-2">
-              <a
-                href="/services#car-loans"
-                onClick={() => setOpen(false)}
-                className="btn-primary text-center"
-              >
-                Apply Today
-              </a>
-              <a
-                href="https://wa.me/255000000000"
-                target="_blank"
-                className="btn-outline text-center"
-              >
-                WhatsApp
-              </a>
-            </div>
+            <a href="/contact" onClick={() => setOpen(false)} className="btn-primary mt-2 text-center">
+              Contact / WhatsApp
+            </a>
 
-            {/* Social Icons Row (simple + clean) */}
+            {/* Social Icons */}
             <div className="mt-4 flex items-center justify-between gap-3">
               <p className="text-xs text-white/60">Follow</p>
               <div className="flex gap-2">
@@ -138,7 +124,7 @@ export default function Navbar() {
                   aria-label="Instagram"
                   title="Instagram"
                 >
-                  IG
+                  <Instagram size={18} />
                 </a>
                 <a
                   href="#"
@@ -147,23 +133,30 @@ export default function Navbar() {
                   aria-label="Facebook"
                   title="Facebook"
                 >
-                  FB
+                  <Facebook size={18} />
                 </a>
                 <a
                   href="#"
                   target="_blank"
                   className="w-10 h-10 rounded-lg border border-white/10 bg-white/5 grid place-items-center hover:border-yellow-500 transition"
-                  aria-label="TikTok"
-                  title="TikTok"
+                  aria-label="YouTube"
+                  title="YouTube"
                 >
-                  TT
+                  <Youtube size={18} />
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  className="w-10 h-10 rounded-lg border border-white/10 bg-white/5 grid place-items-center hover:border-yellow-500 transition"
+                  aria-label="X / Twitter"
+                  title="X / Twitter"
+                >
+                  <Twitter size={18} />
                 </a>
               </div>
             </div>
 
-            <p className="mt-2 text-xs text-white/50">
-              Transparency • Integrity • Trust
-            </p>
+            <p className="mt-2 text-xs text-white/50">Transparency • Integrity • Trust</p>
           </nav>
         </div>
       </div>
