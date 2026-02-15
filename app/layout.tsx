@@ -7,11 +7,10 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 const siteName = "Smart Motorz";
 const siteUrl = "https://smartmotorz.co.tz";
 
-const defaultTitle =
-  "Smart Motorz | Car Importation, Loans & Rentals in Tanzania";
+const defaultTitle = "Smart Motorz | Car Importation, Loans & Rentals in Tanzania";
 
 const defaultDescription =
-  "Smart Motorz (Smart Group Holdings Limited) simplifies car buying in Tanzania through transparent car importation, flexible vehicle financing, corporate car rentals, in-country car sourcing, and exclusive after-sales support—built on integrity, transparency, and trust.";
+  "Smart Motorz (Smart Group Holdings Limited) simplifies car buying in Tanzania through transparent car importation, flexible vehicle financing, corporate car rentals, in-country car sourcing, and exclusive after-sales support, built on integrity, transparency, and trust.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -27,7 +26,6 @@ export const metadata: Metadata = {
   authors: [{ name: siteName }],
   generator: "Next.js",
 
-  // SEO keywords (informational site, no spam)
   keywords: [
     "Smart Motorz Tanzania",
     "car importation Tanzania",
@@ -46,12 +44,10 @@ export const metadata: Metadata = {
     "doorstep vehicle delivery Tanzania",
   ],
 
-  // Default canonical for the site root; per-page can override if needed
   alternates: {
     canonical: siteUrl,
   },
 
-  // Brand + crawler hints
   robots: {
     index: true,
     follow: true,
@@ -64,7 +60,6 @@ export const metadata: Metadata = {
     },
   },
 
-  // Open Graph (social preview)
   openGraph: {
     type: "website",
     url: siteUrl,
@@ -74,16 +69,14 @@ export const metadata: Metadata = {
     locale: "en_TZ",
     images: [
       {
-        // Put this file in: /public/og.jpg  (recommended size 1200x630)
         url: "/og.jpg",
         width: 1200,
         height: 630,
-        alt: "Smart Motorz – Car Importation, Loans & Rentals in Tanzania",
+        alt: "Smart Motorz, Car Importation, Loans & Rentals in Tanzania",
       },
     ],
   },
 
-  // Twitter
   twitter: {
     card: "summary_large_image",
     title: defaultTitle,
@@ -91,11 +84,12 @@ export const metadata: Metadata = {
     images: ["/og.jpg"],
   },
 
-  // Optional: show color in mobile browser UI
-  themeColor: "#000000",
-
-  // Helps search engines understand brand identity
   category: "Automotive",
+};
+
+// ✅ themeColor must be exported separately (not inside metadata)
+export const viewport = {
+  themeColor: "#000000",
 };
 
 export default function RootLayout({

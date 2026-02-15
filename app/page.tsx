@@ -44,7 +44,7 @@ export default function Home() {
       { name: "BMW", src: "/brands/bmw.webp" },
       { name: "Nissan", src: "/brands/nissan.webp" },
       { name: "Audi", src: "/brands/audi.webp" },
-      { name: "Land Rover", src: "/brands/landrover.webp" },
+    
     ],
     []
   );
