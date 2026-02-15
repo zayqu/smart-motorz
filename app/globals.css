@@ -1,6 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+/* ✅ This makes @apply know about Tailwind utilities in v4 */
+@reference "tailwindcss/utilities";
 
 :root {
   --background: #ffffff;
