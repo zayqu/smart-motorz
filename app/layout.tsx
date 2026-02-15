@@ -1,12 +1,101 @@
+import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-export const metadata = {
-  title: "Smart Motorz | Car Importation, Loans & Rentals in Tanzania",
-  description:
-    "Premium car importation, financing, rentals and after-sales support in Tanzania.",
+const siteName = "Smart Motorz";
+const siteUrl = "https://smartmotorz.co.tz";
+
+const defaultTitle =
+  "Smart Motorz | Car Importation, Loans & Rentals in Tanzania";
+
+const defaultDescription =
+  "Smart Motorz (Smart Group Holdings Limited) simplifies car buying in Tanzania through transparent car importation, flexible vehicle financing, corporate car rentals, in-country car sourcing, and exclusive after-sales support—built on integrity, transparency, and trust.";
+
+export const metadata: Metadata = {
+  metadataBase: new URL(siteUrl),
+
+  title: {
+    default: defaultTitle,
+    template: "%s | Smart Motorz",
+  },
+
+  description: defaultDescription,
+
+  applicationName: siteName,
+  authors: [{ name: siteName }],
+  generator: "Next.js",
+
+  // SEO keywords (informational site, no spam)
+  keywords: [
+    "Smart Motorz Tanzania",
+    "car importation Tanzania",
+    "import car from Japan to Tanzania",
+    "car import from Dubai to Tanzania",
+    "car import from UK to Tanzania",
+    "car import from USA to Tanzania",
+    "vehicle financing Tanzania",
+    "car loans Tanzania",
+    "corporate car rentals Tanzania",
+    "executive car rental Tanzania",
+    "in-country car sourcing Tanzania",
+    "buy car Tanzania",
+    "used cars Tanzania",
+    "after-sales support Tanzania",
+    "doorstep vehicle delivery Tanzania",
+  ],
+
+  // Default canonical for the site root; per-page can override if needed
+  alternates: {
+    canonical: siteUrl,
+  },
+
+  // Brand + crawler hints
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+
+  // Open Graph (social preview)
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: defaultTitle,
+    description: defaultDescription,
+    siteName,
+    locale: "en_TZ",
+    images: [
+      {
+        // Put this file in: /public/og.jpg  (recommended size 1200x630)
+        url: "/og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Smart Motorz – Car Importation, Loans & Rentals in Tanzania",
+      },
+    ],
+  },
+
+  // Twitter
+  twitter: {
+    card: "summary_large_image",
+    title: defaultTitle,
+    description: defaultDescription,
+    images: ["/og.jpg"],
+  },
+
+  // Optional: show color in mobile browser UI
+  themeColor: "#000000",
+
+  // Helps search engines understand brand identity
+  category: "Automotive",
 };
 
 export default function RootLayout({
