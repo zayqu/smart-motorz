@@ -9,6 +9,9 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+*.zip
+smart-motorz.zip
+
 
 # testing
 /coverage
