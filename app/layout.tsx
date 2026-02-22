@@ -3,6 +3,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 const siteName = "Smart Motorz";
 const siteUrl = "https://smartmotorz.co.tz";
@@ -104,6 +105,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <WhatsAppButton />
+        <SpeedInsights />
       </body>
     </html>
   );
