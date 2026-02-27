@@ -23,20 +23,34 @@ function setCookie(name: string, value: string) {
 
 export function getLang(): "en" | "sw" {
   const saved =
-    (typeof window !== "undefined" && window.localStorage.getItem("locale")) ||
+    (typeof window !== "undefined" &&
+      window.localStorage.getItem("locale")) ||
     getCookie(COOKIE_NAME) ||
     "en";
+
   return saved === "sw" ? "sw" : "en";
 }
 
-export function setLang(lang: "en" | "sw") {
+/**
+ * Main language setter
+ */
+export function setLanguage(lang: "en" | "sw") {
   if (typeof window !== "undefined") {
     window.localStorage.setItem("locale", lang);
     document.documentElement.lang = lang;
   }
+
   setCookie(COOKIE_NAME, lang);
-  i18n.changeLanguage(lang);
+
+  if (i18n.isInitialized) {
+    i18n.changeLanguage(lang);
+  }
 }
+
+/**
+ * Backward compatibility (if any file uses setLang)
+ */
+export const setLang = setLanguage;
 
 if (!i18n.isInitialized) {
   i18n.use(initReactI18next).init({
