@@ -1,36 +1,47 @@
+// components/Navbar.tsx (FULL REPLACE)
+// NOTE: Only updated to include TikTok + Facebook social links/icons, no removals of existing structure.
 "use client";
 
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { Menu, X, Instagram, Facebook } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { setLang, getLang } from "@/i18n/client";
 import {
-  Menu,
-  X,
-  Instagram,
-  Facebook,
-  Youtube,
-  Twitter,
-} from "lucide-react";
+  INSTAGRAM_LINK,
+  FACEBOOK_LINK,
+  TIKTOK_LINK,
+  PHONE_TEL,
+} from "@/lib/siteConfig";
 
 const nav = [
-  { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
-  { href: "/services", label: "Services" },
-  { href: "/contact", label: "Contact" },
+  { href: "/", key: "nav.home" },
+  { href: "/about", key: "nav.about" },
+  { href: "/services", key: "nav.services" },
+  { href: "/how-to-buy", key: "nav.howToBuy" },
+  { href: "/why-choose-us", key: "nav.whyChooseUs" },
+  { href: "/contact", key: "nav.contact" },
 ];
 
-// ✅ Replace with real links (or keep "#")
-const socials = {
-  instagram: "#",
-  facebook: "#",
-  youtube: "#",
-  twitter: "#",
-};
+function TikTokIcon() {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      className="w-[18px] h-[18px]"
+      aria-hidden="true"
+    >
+      <path d="M19.589 6.686a4.793 4.793 0 0 1-2.885-.973v6.511a5.223 5.223 0 1 1-5.223-5.223c.184 0 .365.015.543.045v2.708a2.516 2.516 0 1 0 2.93 2.47V2h2.75a4.81 4.81 0 0 0 2.885 4.686z" />
+    </svg>
+  );
+}
 
 export default function Navbar() {
+  const { t, i18n } = useTranslation();
   const [open, setOpen] = useState(false);
 
-  // lock scroll
   useEffect(() => {
     document.body.style.overflow = open ? "hidden" : "";
     return () => {
@@ -38,7 +49,6 @@ export default function Navbar() {
     };
   }, [open]);
 
-  // close on ESC
   useEffect(() => {
     const onKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") setOpen(false);
@@ -46,6 +56,14 @@ export default function Navbar() {
     window.addEventListener("keydown", onKeyDown);
     return () => window.removeEventListener("keydown", onKeyDown);
   }, []);
+
+  useEffect(() => {
+    const lang = getLang();
+    if (i18n.language !== lang) i18n.changeLanguage(lang);
+    document.documentElement.lang = lang;
+  }, [i18n]);
+
+  const activeLang = (i18n.language === "sw" ? "sw" : "en") as "en" | "sw";
 
   return (
     <>
@@ -62,7 +80,6 @@ export default function Navbar() {
             />
           </Link>
 
-          {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8 text-sm text-white/80">
             {nav.map((n) => (
               <Link
@@ -70,17 +87,46 @@ export default function Navbar() {
                 href={n.href}
                 className="hover:text-yellow-500 transition"
               >
-                {n.label}
+                {t(n.key)}
               </Link>
             ))}
           </nav>
 
           <div className="flex items-center gap-3">
-            <a href="/contact" className="btn-primary hidden sm:inline-flex">
-              Let’s Talk
+            {/* Language toggle */}
+            <div className="hidden sm:flex items-center gap-2 text-sm text-white/80">
+              <button
+                type="button"
+                onClick={() => setLang("en")}
+                className={[
+                  "px-2 py-1 rounded-md border transition",
+                  activeLang === "en"
+                    ? "border-yellow-500 text-yellow-500"
+                    : "border-white/15 hover:border-yellow-500/60",
+                ].join(" ")}
+              >
+                EN
+              </button>
+              <span className="text-white/30">|</span>
+              <button
+                type="button"
+                onClick={() => setLang("sw")}
+                className={[
+                  "px-2 py-1 rounded-md border transition",
+                  activeLang === "sw"
+                    ? "border-yellow-500 text-yellow-500"
+                    : "border-white/15 hover:border-yellow-500/60",
+                ].join(" ")}
+              >
+                SW
+              </button>
+            </div>
+
+            {/* Lets Talk => CALL */}
+            <a href={PHONE_TEL} className="btn-primary hidden sm:inline-flex">
+              {t("cta.talk")}
             </a>
 
-            {/* Mobile hamburger */}
             <button
               className="md:hidden inline-flex items-center justify-center w-11 h-11 rounded-lg border border-white/15 text-white/90 hover:border-yellow-500 transition"
               onClick={() => setOpen(true)}
@@ -92,18 +138,18 @@ export default function Navbar() {
         </div>
       </header>
 
-      {/* ✅ FULLSCREEN TOP-SLIDE MENU (IN FRONT) */}
       <div
         className={[
           "md:hidden fixed inset-0 z-[9999]",
           "transition-opacity duration-300",
-          open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none",
+          open
+            ? "opacity-100 pointer-events-auto"
+            : "opacity-0 pointer-events-none",
         ].join(" ")}
         role="dialog"
         aria-modal="true"
         aria-hidden={!open}
       >
-        {/* Backdrop */}
         <div
           className={[
             "absolute inset-0 bg-black/75 transition-opacity duration-300",
@@ -112,7 +158,6 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         />
 
-        {/* Panel slides from TOP and covers full screen */}
         <div
           className={[
             "absolute inset-0",
@@ -120,9 +165,7 @@ export default function Navbar() {
             open ? "translate-y-0" : "-translate-y-full",
           ].join(" ")}
         >
-          {/* Glass panel */}
           <div className="h-full w-full bg-black/55 backdrop-blur-2xl border-b border-white/10 shadow-2xl">
-            {/* Top bar */}
             <div className="px-6 pt-6 pb-4 flex items-center justify-between border-b border-white/10">
               <Image
                 src="/logo.svg"
@@ -140,7 +183,6 @@ export default function Navbar() {
               </button>
             </div>
 
-            {/* Menu content */}
             <div className="px-6 py-8 h-[calc(100%-80px)] overflow-y-auto">
               <div className="grid gap-3">
                 {nav.map((n) => (
@@ -150,71 +192,91 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className="rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-5 py-4 text-white/90 font-semibold hover:border-yellow-500/60 transition"
                   >
-                    {n.label}
+                    {t(n.key)}
                   </Link>
                 ))}
               </div>
 
-              {/* Optional bottom CTA (still just a button, no details) */}
               <div className="mt-6 grid gap-3">
                 <a
-                  href="/contact"
+                  href={PHONE_TEL}
                   onClick={() => setOpen(false)}
                   className="btn-primary text-center w-full"
                 >
-                  Contact / WhatsApp
+                  {t("cta.talk")}
                 </a>
               </div>
 
-              {/* Social icons */}
-              <div className="mt-10">
-                <div className="flex gap-2">
-                  <a
-                    href={socials.instagram}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
-                    aria-label="Instagram"
-                    title="Instagram"
+              <div className="mt-8 flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-4 py-3">
+                <div className="text-sm text-white/80">Language</div>
+                <div className="flex items-center gap-2 text-sm text-white/80">
+                  <button
+                    type="button"
+                    onClick={() => setLang("en")}
+                    className={[
+                      "px-2 py-1 rounded-md border transition",
+                      activeLang === "en"
+                        ? "border-yellow-500 text-yellow-500"
+                        : "border-white/15 hover:border-yellow-500/60",
+                    ].join(" ")}
                   >
-                    <Instagram size={18} />
-                  </a>
-                  <a
-                    href={socials.facebook}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
-                    aria-label="Facebook"
-                    title="Facebook"
+                    EN
+                  </button>
+                  <span className="text-white/30">|</span>
+                  <button
+                    type="button"
+                    onClick={() => setLang("sw")}
+                    className={[
+                      "px-2 py-1 rounded-md border transition",
+                      activeLang === "sw"
+                        ? "border-yellow-500 text-yellow-500"
+                        : "border-white/15 hover:border-yellow-500/60",
+                    ].join(" ")}
                   >
-                    <Facebook size={18} />
-                  </a>
-                  <a
-                    href={socials.youtube}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
-                    aria-label="YouTube"
-                    title="YouTube"
-                  >
-                    <Youtube size={18} />
-                  </a>
-                  <a
-                    href={socials.twitter}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
-                    aria-label="X / Twitter"
-                    title="X / Twitter"
-                  >
-                    <Twitter size={18} />
-                  </a>
+                    SW
+                  </button>
                 </div>
-
-                <p className="mt-6 text-xs text-white/50">
-                  Transparency • Integrity • Trust
-                </p>
               </div>
+
+              {/* Socials (UPDATED: Instagram + TikTok + Facebook) */}
+              <div className="mt-8 flex gap-2">
+                <a
+                  href={INSTAGRAM_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
+                  aria-label="Instagram"
+                  title="Instagram"
+                >
+                  <Instagram size={18} />
+                </a>
+
+                <a
+                  href={TIKTOK_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
+                  aria-label="TikTok"
+                  title="TikTok"
+                >
+                  <TikTokIcon />
+                </a>
+
+                <a
+                  href={FACEBOOK_LINK}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="w-12 h-12 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md grid place-items-center hover:border-yellow-500 transition"
+                  aria-label="Facebook"
+                  title="Facebook"
+                >
+                  <Facebook size={18} />
+                </a>
+              </div>
+
+              <p className="mt-6 text-xs text-white/50">
+                Transparency • Integrity • Trust
+              </p>
 
               <div className="h-10" />
             </div>

@@ -2,7 +2,9 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import WhatsAppButton from "@/components/WhatsAppButton";
+import AppProviders from "@/components/AppProviders";
+import LeadFormModal from "@/components/LeadFormModal";
+import FloatingLeadButton from "@/components/FloatingLeadButton";
 
 const siteName = "Smart Motorz";
 const siteUrl = "https://smartmotorz.co.tz";
@@ -87,23 +89,21 @@ export const metadata: Metadata = {
   category: "Automotive",
 };
 
-// ✅ themeColor must be exported separately (not inside metadata)
 export const viewport = {
   themeColor: "#000000",
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <body className="bg-black text-white">
-        <Navbar />
-        {children}
-        <Footer />
-        <WhatsAppButton />
+        <AppProviders>
+          <Navbar />
+          {children}
+          <Footer />
+          <FloatingLeadButton />
+          <LeadFormModal />
+        </AppProviders>
       </body>
     </html>
   );

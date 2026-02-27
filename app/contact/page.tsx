@@ -1,9 +1,15 @@
+// app/contact/page.tsx  (update: FULL REPLACE)
 "use client";
 
 import { motion, Variants } from "framer-motion";
 import { PhoneCall, Mail, MapPin, Clock, ArrowRight, MessageCircle } from "lucide-react";
+import { useTranslation } from "react-i18next";
+import { useLeadFormModal } from "@/components/LeadModalProvider";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
+  const { open: openLead } = useLeadFormModal();
+
   const ease = [0.22, 1, 0.36, 1] as const;
 
   const fadeUp: Variants = {
@@ -16,50 +22,42 @@ export default function ContactPage() {
     show: { transition: { staggerChildren: 0.08, delayChildren: 0.08 } },
   };
 
-  // ✅ Replace these with real details
-  const whatsappNumber = "255000000000"; // no + sign
   const email = "info@smartmotorz.co.tz";
-  const phone = "+255 000 000 000";
-  const address = "Dar es Salaam, Tanzania";
-  const hours = "Mon–Sat: 8:00 AM – 6:00 PM";
-
-  const waLink = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-    "Hello Smart Motorz, I’d like a vehicle consultation."
-  )}`;
+  const phone = "+255651732526";
+  const address = "Tanga Mjini, Chuda karibu na Nyinda Tourist Hotel.";
+  const hours = "Monday – Saturday, 08:00 – 17:00";
 
   return (
     <main className="bg-black text-white">
-      {/* HERO */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(234,179,8,0.14),transparent_55%)]" />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black to-black" />
+        <div className="absolute inset-0 bg-linear-to-b from-black/70 via-black to-black" />
 
         <div className="relative z-10 mx-auto max-w-6xl px-6 pt-28 pb-14">
           <motion.div variants={stagger} initial="hidden" animate="show">
             <motion.h1 variants={fadeUp} className="text-4xl md:text-6xl font-bold tracking-tight">
-              Contact Smart Motorz
+              {t("contact.title")}
             </motion.h1>
             <motion.p variants={fadeUp} className="mt-4 max-w-3xl text-white/70 text-base md:text-lg">
-              Ready to drive smart? Send us your budget and preference we’ll recommend the right vehicle and handle the rest.
+              {t("contact.subtitle")}
             </motion.p>
 
             <motion.div variants={fadeUp} className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a href={waLink} target="_blank" className="btn-primary">
-                WhatsApp Now <ArrowRight size={16} className="ml-2" />
-              </a>
+              <button type="button" onClick={openLead} className="btn-primary">
+                {t("cta.talk")} <ArrowRight size={16} className="ml-2" />
+              </button>
               <a href={`mailto:${email}`} className="btn-outline">
-                Email Us <ArrowRight size={16} className="ml-2" />
+                {t("contact.emailUs")} <ArrowRight size={16} className="ml-2" />
               </a>
             </motion.div>
           </motion.div>
         </div>
 
         <div className="mx-auto max-w-6xl px-6">
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/15 to-transparent" />
+          <div className="h-px w-full bg-linear-to-r from-transparent via-white/15 to-transparent" />
         </div>
       </section>
 
-      {/* CONTACT CARDS */}
       <section className="bg-black">
         <div className="mx-auto max-w-6xl px-6 py-16">
           <motion.div
@@ -74,14 +72,12 @@ export default function ContactPage() {
                 <span className="w-12 h-12 rounded-2xl bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
                   <MessageCircle size={18} />
                 </span>
-                <h2 className="text-2xl font-bold">WhatsApp</h2>
+                <h2 className="text-2xl font-bold">{t("contact.fastestTitle")}</h2>
               </div>
-              <p className="mt-4 text-white/70">
-                Fastest way to reach us. Send your budget, preferred model, and timeline.
-              </p>
-              <a href={waLink} target="_blank" className="mt-6 inline-flex items-center gap-2 text-yellow-500 hover:underline">
-                Open WhatsApp <ArrowRight size={16} />
-              </a>
+              <p className="mt-4 text-white/70">{t("contact.fastestDesc")}</p>
+              <button type="button" onClick={openLead} className="mt-6 inline-flex items-center gap-2 text-yellow-500 hover:underline">
+                {t("contact.openForm")} <ArrowRight size={16} />
+              </button>
             </motion.div>
 
             <motion.div variants={fadeUp} className="rounded-3xl border border-white/10 bg-white/5 p-7 backdrop-blur-md">
@@ -89,11 +85,9 @@ export default function ContactPage() {
                 <span className="w-12 h-12 rounded-2xl bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
                   <Mail size={18} />
                 </span>
-                <h2 className="text-2xl font-bold">Email</h2>
+                <h2 className="text-2xl font-bold">{t("contact.emailTitle")}</h2>
               </div>
-              <p className="mt-4 text-white/70">
-                Prefer email? Send a short brief and we’ll respond with next steps.
-              </p>
+              <p className="mt-4 text-white/70">{t("contact.emailDesc")}</p>
               <a href={`mailto:${email}`} className="mt-6 inline-flex items-center gap-2 text-yellow-500 hover:underline">
                 {email} <ArrowRight size={16} />
               </a>
@@ -104,11 +98,9 @@ export default function ContactPage() {
                 <span className="w-12 h-12 rounded-2xl bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
                   <PhoneCall size={18} />
                 </span>
-                <h2 className="text-2xl font-bold">Phone</h2>
+                <h2 className="text-2xl font-bold">{t("contact.phoneTitle")}</h2>
               </div>
-              <p className="mt-4 text-white/70">
-                Call us for a direct consultation and quick guidance.
-              </p>
+              <p className="mt-4 text-white/70">{t("contact.phoneDesc")}</p>
               <a href={`tel:${phone.replace(/\s/g, "")}`} className="mt-6 inline-flex items-center gap-2 text-yellow-500 hover:underline">
                 {phone} <ArrowRight size={16} />
               </a>
@@ -119,7 +111,7 @@ export default function ContactPage() {
                 <span className="w-12 h-12 rounded-2xl bg-yellow-500/15 border border-yellow-500/25 grid place-items-center text-yellow-500">
                   <MapPin size={18} />
                 </span>
-                <h2 className="text-2xl font-bold">Location & Hours</h2>
+                <h2 className="text-2xl font-bold">{t("contact.locationTitle")}</h2>
               </div>
               <div className="mt-4 space-y-2 text-white/70">
                 <p className="flex items-center gap-2"><MapPin size={16} className="text-yellow-500" /> {address}</p>
@@ -128,18 +120,15 @@ export default function ContactPage() {
             </motion.div>
           </motion.div>
 
-          {/* Bottom CTA */}
           <div className="mt-12 rounded-3xl border border-white/10 bg-white/5 p-8 backdrop-blur-md">
-            <h3 className="text-2xl md:text-3xl font-bold">Send this to get a fast quote</h3>
-            <p className="mt-3 text-white/70">
-              Budget • Preferred model • Fuel type • Transmission • Timeline • City/Region for delivery.
-            </p>
+            <h3 className="text-2xl md:text-3xl font-bold">{t("contact.fastQuoteTitle")}</h3>
+            <p className="mt-3 text-white/70">{t("contact.fastQuoteDesc")}</p>
             <div className="mt-6 flex flex-col sm:flex-row gap-3">
-              <a href={waLink} target="_blank" className="btn-primary text-center">
-                WhatsApp Now
-              </a>
+              <button type="button" onClick={openLead} className="btn-primary text-center">
+                {t("cta.talk")}
+              </button>
               <a href="/services" className="btn-outline text-center">
-                View Services
+                {t("contact.viewServices")}
               </a>
             </div>
           </div>

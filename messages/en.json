@@ -1,0 +1,396 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "howToBuy": "How to Buy",
+    "whyChooseUs": "Why Us",
+    "contact": "Talk to Us"
+  },
+  "cta": {
+    "talk": "Let’s Talk",
+    "whatsapp": "WhatsApp Us",
+    "openLeadForm": "Start Now"
+  },
+  "home": {
+    "hero": {
+      "badge": "Automotive Excellence",
+      "title": "Smart Motorz",
+      "description": "We make owning your dream car easy through transparent importation, flexible financing, corporate rentals, and dedicated support even after you drive away.",
+      "primary": "Get Your Car Quote",
+      "secondary": "Apply & Drive Home",
+      "bigText": "OWN YOUR CAR THE SMART WAY"
+    },
+    "quickCards": {
+      "importation": {
+        "title": "Car Importation",
+        "subtitle": "Sourcing You Can Trust",
+        "text": "Japan • Germany • Dubai • UK • USA",
+        "cta": "Get Quote"
+      },
+      "loans": {
+        "title": "Car Loans",
+        "subtitle": "Drive Home the Same Day",
+        "text": "2–4 Years • No Collateral",
+        "cta": "Apply Today"
+      },
+      "rentals": {
+        "title": "Car Rentals",
+        "subtitle": "For Business & Executives",
+        "text": "Daily • Weekly • Long-term",
+        "cta": "Book Now"
+      }
+    },
+    "categoryStrip": {
+      "importation": "Importation",
+      "loans": "Loans",
+      "inCountry": "Local Sourcing",
+      "rentals": "Rentals",
+      "afterSales": "Support"
+    },
+    "carTypes": {
+      "title": "Find Your Perfect Ride",
+      "link": "Explore Services",
+      "items": {
+        "sportcars": {
+          "label": "Performance Cars",
+          "desc": "Speed and modern style"
+        },
+        "suvs": {
+          "label": "SUVs & 4x4s",
+          "desc": "Comfort, space, and power"
+        },
+        "luxurySedans": {
+          "label": "Luxury Rides",
+          "desc": "Executive class and status"
+        },
+        "vans": {
+          "label": "Vans & Family Cars",
+          "desc": "For business and big families"
+        }
+      }
+    },
+    "whiteSplit": {
+      "badge": "Your Trusted Car Partner",
+      "title": "A simpler way to own a quality vehicle.",
+      "description": "Smart Motorz is a division of Smart Group Holdings Limited. We were founded to make car buying honest, transparent, and completely stress-free for everyone.",
+      "primary": "Learn More",
+      "secondary": "Speak With an Advisor"
+    },
+    "valueCards": {
+      "transparency": {
+        "title": "Total Transparency",
+        "desc": "Clear pricing and full details, absolutely no hidden fees or surprises."
+      },
+      "integrity": {
+        "title": "Honesty First",
+        "desc": "We maintain the highest ethical standards in every single deal."
+      },
+      "trust": {
+        "title": "Reliability",
+        "desc": "Quality vehicles and a partnership that lasts long after handover."
+      },
+      "delivery": {
+        "title": "Doorstep Delivery",
+        "desc": "We deliver your car straight to your door, anywhere in Tanzania."
+      }
+    },
+    "results": {
+      "title": "Results. Not Excuses.",
+      "description": "With fast turnaround times and a global network, we provide weekly updates until the keys are in your hands."
+    },
+    "yellowStrip": {
+      "title": "Not sure which car fits your life?",
+      "description": "Take our quick 10-question quiz to get a personalized recommendation based on your budget.",
+      "highlight": "Private. Confidential. Made for you.",
+      "primary": "Find My Perfect Car",
+      "secondary": "Talk to Us"
+    },
+    "howToBuy": {
+      "title": "How to Buy",
+      "subtitle": "A guided, stress-free process from your first message to the final handover.",
+      "cta": "Start Your Journey",
+      "steps": {
+        "getInTouch": {
+          "title": "Get in Touch",
+          "desc": "Call, WhatsApp, or visit us to share your dream car details."
+        },
+        "privateAssessment": {
+          "title": "Personal Advice",
+          "desc": "We look at your budget and lifestyle to find your best match."
+        },
+        "transparentQuote": {
+          "title": "Clear Quote",
+          "desc": "You get a contract and invoice with a full breakdown of every cent."
+        },
+        "initialPayment": {
+          "title": "Start the Process",
+          "desc": "A 60% deposit kicks off the sourcing and importation process."
+        },
+        "sourcingImport": {
+          "title": "Sourcing & Import",
+          "desc": "We handle everything from buying abroad to shipping it home."
+        },
+        "weeklyTracking": {
+          "title": "Weekly Updates",
+          "desc": "Photos and progress reports on shipping, clearing, and registration."
+        },
+        "handover": {
+          "title": "The Big Day",
+          "desc": "Pick up your car or have us deliver it right to your home."
+        },
+        "driveConfidence": {
+          "title": "Always With You",
+          "desc": "Ongoing technical support even after you’ve started driving."
+        }
+      }
+    },
+    "offers": {
+      "title": "The Smart Package",
+      "subtitle": "Essential extras included with your car at no additional cost.",
+      "items": {
+        "insurance": "Comprehensive Insurance (BIMA)",
+        "registration": "Registration & Plate Numbers",
+        "triangle": "Safety Triangle",
+        "extinguisher": "Fire Extinguisher",
+        "fullTank": "We Give You a Full Tank of Fuel",
+        "delivery": "Free Delivery to Any Region"
+      }
+    }
+  },
+  "footer": {
+    "promise": "Our Promise",
+    "promiseTitle": "Car buying should be exciting, not stressful.",
+    "promiseDesc": "We provide transparency, speed, and full support from the port to your home.",
+    "carLoans": "Car Loans",
+    "carLoansDesc": "Apply today, drive sooner",
+    "howToBuy": "How to Buy",
+    "howToBuyDesc": "Your guide to ownership",
+    "importation": "Importation",
+    "importationDesc": "Request a vehicle quote",
+    "inCountry": "Local Sourcing",
+    "inCountryDesc": "Cars available in Tanzania",
+    "carRentals": "Car Rentals",
+    "carRentalsDesc": "Secure your ride today",
+    "aboutText": "Smart Motorz (Smart Group Holdings) simplifies car buying through transparent importation, flexible financing, and expert after-sales support.",
+    "phone": "Phone:",
+    "email": "Email:",
+    "address": "Our Office:",
+    "hours": "Working Hours:",
+    "emailBtn": "Send Email",
+    "usefulLinks": "Quick Links",
+    "follow": "Follow Us",
+    "followDesc": "Get updates on new arrivals and exclusive daily offers.",
+    "values": "Transparency • Integrity • Trust",
+    "rights": "All rights reserved.",
+    "company": "Smart Group Holdings Limited",
+    "websiteBy": "Designed by Daraja"
+  },
+  "howToBuy": {
+    "title": "How to Buy",
+    "subtitle": "A simple, guided process from picking your car to delivery.",
+    "note": "We handle the entire process for you.",
+    "steps": {
+      "choose": {
+        "title": "Choose Your Car",
+        "desc": "Tell us your model, budget, and timeline. We’ll find the best options."
+      },
+      "budget": {
+        "title": "Confirm Budget",
+        "desc": "We confirm all costs and discuss your payment or financing plan."
+      },
+      "secure": {
+        "title": "Secure & Import",
+        "desc": "We inspect the car, manage shipping and clearing, and keep you posted."
+      },
+      "delivery": {
+        "title": "Registration & Delivery",
+        "desc": "We handle the plates and deliver the car ready for the road."
+      }
+    },
+    "ctaTitle": "Ready to Start?",
+    "ctaDesc": "Share your budget and preference for a consultation in minutes.",
+    "ctaButton": "Get Started"
+  },
+  "why": {
+    "title": "Why Choose Smart Motorz",
+    "subtitle": "Expert guidance, total transparency, and end-to-end service.",
+    "cta": "Speak With an Advisor",
+    "items": {
+      "experienced": "Real Automotive Pros. Years of experience in sourcing and financing. You get expert advice, not guesswork.",
+      "rightCar": "The Right Car, The Right Price.  We use our global network to find the best value so you never overpay.",
+      "transparency": "Total Transparency. Clear pricing and honest advice with no hidden surprises.",
+      "endToEnd": "We Handle Everything, From sourcing to registration and delivery, we do the heavy lifting.",
+      "fast": "Fast & Reliable. Our streamlined process gets you on the road without unnecessary delays.",
+      "relationships": "Long-Term Partnerships. We don’t disappear after the sale; we support you throughout your ownership.",
+      "peace": "Complete Peace of Mind. We deliver a seamless experience and real value you can trust."
+    },
+    "footerLine": "Smart Motorz, The Right Car. The Right Price. Zero Guesswork."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Importation, loans, and support designed to eliminate delays and hidden costs.",
+    "why": "The Smart Advantage",
+    "talk": "Talk to an Advisor",
+    "whatYouGet": "What You Get",
+    "stripTitle": "Ready to own your car the smart way?",
+    "stripDesc": "Tell us your budget and preference. We’ll handle the rest.",
+    "stripPrimary": "Talk to a Smart Motorz Advisor",
+    "stripSecondary": "Get Started",
+    "items": {
+      "importation": {
+        "title": "Car Importation",
+        "desc": "We source and import high-quality cars from Japan, Germany, Dubai, UK, and USA. Fully managed and delivered to your door.",
+        "bullets": [
+          "Expert advice on the best car for you",
+          "Sourcing based on your exact needs",
+          "Transparent pricing (no hidden fees)",
+          "Complete end-to-end handling",
+          "Weekly progress updates"
+        ],
+        "cta": "Get Your Personalized Quote"
+      },
+      "loans": {
+        "title": "Car Loans",
+        "desc": "Flexible financing with small down payments and 2–4 year terms. No collateral, no stress, just clear terms.",
+        "bullets": [
+          "Small down payment to start",
+          "2–4 year installment plans",
+          "No collateral required",
+          "Drive away fast (subject to terms)",
+          "Clear and simple monthly schedule"
+        ],
+        "cta": "Apply Today & Drive Home"
+      },
+      "inCountry": {
+        "title": "Local Car Sourcing",
+        "desc": "Need a car right now? We connect you with trusted local sellers and handle the negotiations for you.",
+        "bullets": [
+          "Fast sourcing within Tanzania",
+          "Verified dealer network only",
+          "Expert price negotiations",
+          "Delivery to your location",
+          "Save time and avoid scams"
+        ],
+        "cta": "Speak With an Advisor"
+      },
+      "rentals": {
+        "title": "Professional Rentals",
+        "desc": "Executive rentals for corporate clients and travelers. Daily, weekly, and long-term options available.",
+        "bullets": [
+          "Luxury Sedans & SUVs (Well-maintained)",
+          "Daily, weekly, or monthly options",
+          "Delivery + dedicated support",
+          "Corporate billing supported",
+          "Insurance & maintenance included"
+        ],
+        "cta": "Secure Your Ride Today"
+      },
+      "afterSales": {
+        "title": "After-Sales Support (Clients Only)",
+        "desc": "Join the family. We offer maintenance tips, trusted mechanics, and parts sourcing from Dubai at cost.",
+        "bullets": [
+          "Maintenance & oil recommendations",
+          "Access to our trusted mechanic network",
+          "Dubai team sources parts & upgrades",
+          "No service fees, pay supplier cost + shipping",
+          "Exclusive to Smart Motorz clients"
+        ],
+        "cta": "Ask About Upgrades & Support"
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Smart Motorz",
+    "subtitle": "Ready to own your car the smart way? Share your budget and preference, we’ll handle the rest.",
+    "emailUs": "Email Us",
+    "fastestTitle": "Quick Form",
+    "fastestDesc": "The fastest way to reach us. Share your budget, model, and timeline.",
+    "openForm": "Start Now",
+    "emailTitle": "Email",
+    "emailDesc": "Prefer email? Send us a brief and we’ll get back to you.",
+    "phoneTitle": "Phone",
+    "phoneDesc": "Call us for a direct consultation.",
+    "locationTitle": "Location & Hours",
+    "fastQuoteTitle": "Get a fast quote by sending:",
+    "fastQuoteDesc": "Budget • Model • Fuel Type • Transmission • Timeline • City.",
+    "viewServices": "View Services"
+  },
+  "leadForm": {
+    "title": "Talk to an Advisor",
+    "subtitle": "Fill in your details and we’ll reach out shortly.",
+    "fullName": "Full Name",
+    "fullNamePh": "Enter your full name",
+    "phone": "Phone Number",
+    "phonePrefix": "+255",
+    "phonePh": "e.g. 65xxxxxxx",
+    "email": "Email (Optional)",
+    "emailPh": "Enter your email address",
+    "errors": {
+      "required": "Full Name and Phone are required.",
+      "failed": "Something went wrong. Please try again."
+    }
+  },
+  "common": {
+    "cancel": "Cancel",
+    "submit": "Submit",
+    "loading": "Sending..."
+  },
+  "about": {
+    "hero": {
+      "badge": "About Smart Motorz",
+      "title": "Built on transparency and trust.",
+      "description": "Smart Motorz is a division of Smart Group Holdings Limited. We are dedicated to making the car buying experience simple, honest, and personalized for every client.",
+      "primary": "Explore Services",
+      "secondary": "Book a Test Drive"
+    },
+    "values": {
+      "title": "Our Core Values",
+      "subtitle": "We embody honesty and transparency in everything we do to make your journey rewarding.",
+      "items": {
+        "transparency": {
+          "title": "Transparency",
+          "desc": "We provide clear, honest info on pricing and condition so you can decide with confidence."
+        },
+        "integrity": {
+          "title": "Integrity",
+          "desc": "We stick to high ethical standards and fairness in every single deal."
+        },
+        "trust": {
+          "title": "Trust",
+          "desc": "We build long-term relationships through reliable service and support that never ends."
+        }
+      }
+    },
+    "vision": {
+      "title": "Our Vision",
+      "desc": "To be Tanzania’s most trusted automotive partner, setting the gold standard for service and customer care."
+    },
+    "mission": {
+      "title": "Our Mission",
+      "desc": "To make quality vehicles accessible through reliable, transparent, and customer-focused solutions."
+    },
+    "leadership": {
+      "title": "Our Leadership",
+      "subtitle": "Experience and accountability that puts the client first.",
+      "members": {
+        "ceo": {
+          "name": "Samwel Mwalembe CPA(T)",
+          "title": "CEO (SMART GROUP HOLDINGS)",
+          "message": "Our word is our bond. Sit back, relax, and let us handle everything for you."
+        },
+        "ops": {
+          "name": "Joel Mwalembe",
+          "title": "Operations Manager (SMART MOTORZ)",
+          "message": "Our vision is simple: to change how people buy cars. We built this on honesty and expertise."
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to own your car the smart way?",
+      "desc": "Contact Smart Motorz today. Our team handles everything from sourcing to delivery.",
+      "primary": "Contact Us",
+      "secondary": "View Services"
+    }
+  }
+}

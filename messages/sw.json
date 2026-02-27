@@ -1,0 +1,395 @@
+{
+  "nav": {
+    "home": "Mwanzo",
+    "about": "Kutuhusu",
+    "services": "Huduma Zetu",
+    "howToBuy": "Jinsi ya Kununua",
+    "whyChooseUs": "Kwanini Sisi",
+    "contact": "Wasiliana Nasi"
+  },
+  "cta": {
+    "talk": "Tuongee",
+    "whatsapp": "Tuma WhatsApp"
+  },
+  "home": {
+    "hero": {
+      "badge": "Mabingwa wa Magari",
+      "title": "Smart Motorz",
+      "description": "Tunarahisisha ndoto yako ya kupata gari kupitia uagizaji usio na siri, mikopo nafuu, ukodishaji kwa makampuni, utafutaji wa magari hapa nchini, na msaada wa kutosha hata baada ya kununua.",
+      "primary": "Pata Bei ya Gari",
+      "secondary": "Omba Leo & Ondoka na Gari",
+      "bigText": "MILIKI GARI KIJANJA"
+    },
+    "quickCards": {
+      "importation": {
+        "title": "Kuagiza Gari",
+        "subtitle": "Utafutaji wa Uhakika",
+        "text": "Japan • Germany • Dubai • UK • USA",
+        "cta": "Pata Bei"
+      },
+      "loans": {
+        "title": "Mikopo ya Gari",
+        "subtitle": "Ondoka na gari siku hiyo hiyo",
+        "text": "Miaka 2–4 • Bila dhamana",
+        "cta": "Omba Leo"
+      },
+      "rentals": {
+        "title": "Kukodisha Magari",
+        "subtitle": "Kwa Ofisi na Viongozi",
+        "text": "Kila siku • Kila wiki • Muda mrefu",
+        "cta": "Weka Nafasi"
+      }
+    },
+    "categoryStrip": {
+      "importation": "Uagizaji",
+      "loans": "Mikopo",
+      "inCountry": "Magari ya Hapa Nchini",
+      "rentals": "Ukodishaji",
+      "afterSales": "Msaada wa Baadaye"
+    },
+    "carTypes": {
+      "title": "Aina za Magari",
+      "link": "Angalia huduma",
+      "items": {
+        "sportcars": {
+          "label": "Magari ya Kasi",
+          "desc": "Nguvu na muonekano wa kisasa"
+        },
+        "suvs": {
+          "label": "Magari Makubwa (SUVs)",
+          "desc": "Faraja, nafasi, na uimara"
+        },
+        "luxurySedans": {
+          "label": "Magari ya Kishua",
+          "desc": "Kwa ajili ya hadhi na viongozi"
+        },
+        "vans": {
+          "label": "Vans na Familia",
+          "desc": "Kwa ajili ya biashara na familia"
+        }
+      }
+    },
+    "whiteSplit": {
+      "badge": "Mshirika wako wa uhakika",
+      "title": "Njia rahisi ya kumiliki gari bora.",
+      "description": "Smart Motorz ni sehemu ya Smart Group Holdings Limited. Tulianzishwa ili kufanya ununuzi wa gari uwe wa uaminifu na rahisi kwa kila mtu bila usumbufu.",
+      "primary": "Tufahamu Zaidi",
+      "secondary": "Ongea na Mtaalamu"
+    },
+    "valueCards": {
+      "transparency": {
+        "title": "Uwazi",
+        "desc": "Bei zetu hazina ni za wazi na utapata taarifa zote, hakuna gharama za ujanja ujanja."
+      },
+      "integrity": {
+        "title": "Uaminifu",
+        "desc": "Tunafanya kazi kwa heshima na haki katika kila hatua ya ununuzi."
+      },
+      "trust": {
+        "title": "Uhakika",
+        "desc": "Huduma ya kweli, magari bora, na tuko nawe kwa muda mrefu."
+      },
+      "delivery": {
+        "title": "Tunakuletea",
+        "desc": "Tunakufikishia gari lako hadi mlangoni, popote ulipo Tanzania."
+      }
+    },
+    "results": {
+      "title": "Matokeo. Sio visingizio.",
+      "description": "Kazi yetu ni ya haraka, tuna mtandao mpana wa nje na ndani, na tunakupa updates kila wiki hadi unakabidhiwa funguo."
+    },
+    "yellowStrip": {
+      "title": "Hujui gari gani linakufaa?",
+      "description": "Jibu maswali yetu 10 upate ushauri wa gari linaloendana na wewe.",
+      "highlight": "Ni kwa ajili yako tu. Siri yako. Imeandaliwa maalum.",
+      "primary": "Anza Kutafuta Gari",
+      "secondary": "Wasiliana Nasi"
+    },
+    "howToBuy": {
+      "title": "Jinsi ya Kununua",
+      "subtitle": "Mchakato rahisi usio na siri kuanzia ujumbe wa kwanza hadi unakabidhiwa gari.",
+      "cta": "Anza Safari Yako",
+      "steps": {
+        "getInTouch": {
+          "title": "Tuwasiliane",
+          "desc": "Piga simu, tuma WhatsApp, au fika ofisini kuanza safari yako."
+        },
+        "privateAssessment": {
+          "title": "Ushauri wa Bure",
+          "desc": "Tunaangalia mfuko wako, mahitaji yako, na gari unalolipenda."
+        },
+        "transparentQuote": {
+          "title": "Bei Bila Siri",
+          "desc": "Mkataba na ankara (invoice) yenye mchanganuo wa kila kitu."
+        },
+        "initialPayment": {
+          "title": "Kuanza Kazi",
+          "desc": "Lipia asilimia 60% (au yote kwa haraka zaidi) tuanze kazi."
+        },
+        "sourcingImport": {
+          "title": "Utafutaji & Uagizaji",
+          "desc": "Tunasimamia kila kitu kuanzia kulinunua hadi kulisafirisha."
+        },
+        "weeklyTracking": {
+          "title": "Kila Wiki",
+          "desc": "Tunakupa picha na updates za clearing, usajili, na safari ya gari."
+        },
+        "handover": {
+          "title": "Makabidhiano",
+          "desc": "Chukua gari lako au tukuletee hadi mlangoni kwako."
+        },
+        "driveConfidence": {
+          "title": "Endesha kwa Uhakika",
+          "desc": "Tutaendelea kukusaidia hata baada ya kukukabidhi gari."
+        }
+      }
+    },
+    "offers": {
+      "title": "Vitu vya Bure",
+      "subtitle": "Vifaa muhimu tunavyokupa pamoja na gari lako, bila kukuongezea gharama.",
+      "items": {
+        "insurance": "Bima (BIMA)",
+        "registration": "Usajili & Namba ya Gari",
+        "triangle": "Triangle ya Usalama",
+        "extinguisher": "Kizima Moto",
+        "fullTank": "Tunakujazia Mafuta Full Tank",
+        "delivery": "Tunakuletea Mkoa Wowote"
+      }
+    }
+  },
+  "footer": {
+    "promise": "Ahadi ya Smart Motorz",
+    "promiseTitle": "Kununua gari iwe ni furaha, sio stress.",
+    "promiseDesc": "Tunatoa uwazi, kasi, na msaada kamili kuanzia utafutaji hadi unakabidhiwa gari.",
+    "carLoans": "Mikopo ya Gari",
+    "carLoansDesc": "Omba leo, endesha leo",
+    "howToBuy": "Jinsi ya Kununua",
+    "howToBuyDesc": "Anza safari ya umiliki",
+    "importation": "Uagizaji",
+    "importationDesc": "Pata bei ya gari",
+    "inCountry": "Magari ya Hapa Nchini",
+    "inCountryDesc": "Ongea na mshauri",
+    "carRentals": "Ukodishaji wa Magari",
+    "carRentalsDesc": "Weka nafasi ya gari leo",
+    "aboutText": "Smart Motorz (Smart Group Holdings Limited) inarahisisha ununuzi wa gari kupitia uagizaji usio na siri, mikopo nafuu, ukodishaji, utafutaji wa ndani, na msaada wa baadaye.",
+    "phone": "Simu:",
+    "email": "Barua Pepe:",
+    "address": "Ofisi Yetu:",
+    "hours": "Muda wa Kazi:",
+    "emailBtn": "Tuma Email",
+    "usefulLinks": "Viungo Muhimu",
+    "follow": "Tufuate",
+    "followDesc": "Habari, magari mapya, na ofa tufollow Smart Motorz.",
+    "values": "Uwazi • Uaminifu • Uhakika",
+    "rights": "Haki zote zimehifadhiwa.",
+    "company": "Smart Group Holdings Limited",
+    "websiteBy": "Imetengenezwa na Daraja"
+  },
+  "about": {
+    "hero": {
+      "badge": "Kutuhusu Smart Motorz",
+      "title": "Msingi wetu ni uwazi na uaminifu.",
+      "description": "Smart Motorz ni sehemu ya Smart Group Holdings Limited inayolenga kurahisisha ununuzi wa gari kwa wateja wetu. Tunajali ubora, uwazi, na huduma inayomlenga mteja moja kwa moja, kuanzia uagizaji, ukodishaji, mikopo, hadi msaada wa kiufundi.",
+      "primary": "Angalia Huduma",
+      "secondary": "Panga Test Drive"
+    },
+    "values": {
+      "title": "Misingi Yetu",
+      "subtitle": "Smart Motorz tunaishi kwa misingi ya uaminifu na uwazi. Tunajitahidi kufanya safari yako ya kupata gari iwe rahisi na yenye thamani.",
+      "items": {
+        "transparency": {
+          "title": "Uwazi",
+          "desc": "Tunatoa taarifa za ukweli kuhusu kila gari bei, hali yake, na gharama zote ili uamue kwa uhakika."
+        },
+        "integrity": {
+          "title": "Uaminifu",
+          "desc": "Tunafanya kazi kwa haki, tukisimamia mchakato wako kwa umakini mkubwa kuanzia mwanzo hadi mwisho."
+        },
+        "trust": {
+          "title": "Uhakika",
+          "desc": "Tunajenga urafiki wa muda mrefu kupitia huduma bora, magari ya uhakika, na msaada unaoendelea."
+        }
+      }
+    },
+    "vision": {
+      "title": "Dira Yetu",
+      "desc": "Kuwa mshirika wa magari anayeaminiwa zaidi Tanzania, tukiweka kiwango cha juu cha ubora na urafiki wa kudumu na wateja."
+    },
+    "mission": {
+      "title": "Lengo Letu",
+      "desc": "Kufanya magari bora yapatikane kwa njia ya wazi, ya uaminifu, na inayomjali mteja kwanza."
+    },
+    "leadership": {
+      "title": "Uongozi Wetu",
+      "subtitle": "Uzoefu na uwajibikaji unaomweka mteja mbele.",
+      "members": {
+        "ceo": {
+          "name": "Samwel Mwalembe CPA(T)",
+          "title": "Bosi Mkuu (SMART GROUP HOLDINGS (TZ) LIMITED)",
+          "message": "Neno letu ni dhamana. Tulia, pumzika, na tuache sisi tushughulikie kila kitu kwa ajili yako."
+        },
+        "ops": {
+          "name": "Joel Mwalembe",
+          "title": "Meneja Uendeshaji (SMART MOTORZ)",
+          "message": "Dira yetu ni rahisi: kubadili namna watu wanavyonunua magari. Tumejenga kampuni hii juu ya uaminifu na utaalamu. Hutajutia kutuamini."
+        }
+      }
+    },
+    "cta": {
+      "title": "Uko tayari kumiliki gari kijanja?",
+      "desc": "Wasiliana na Smart Motorz leo. Timu yetu itasimamia kila kitu kuanzia utafutaji hadi unakabidhiwa funguo.",
+      "primary": "Wasiliana Nasi",
+      "secondary": "Angalia Huduma"
+    }
+  },
+  "howToBuy": {
+    "title": "Jinsi ya Kununua",
+    "subtitle": "Mchakato rahisi kuanzia kuchagua gari hadi unakabidhiwa funguo.",
+    "note": "Tunasimamia kila hatua.",
+    "steps": {
+      "choose": {
+        "title": "Chagua Gari Lako",
+        "desc": "Tueleze aina ya gari, bajeti, na muda unapolihitaji. Tutakupa machaguo bora."
+      },
+      "budget": {
+        "title": "Thibitisha Bajeti & Malipo",
+        "desc": "Tunathibitisha gharama zote na mpango wako wa malipo au mkopo."
+      },
+      "secure": {
+        "title": "Hakikisha & Uagize",
+        "desc": "Tunahakikisha gari ni zima, tunasimamia kusafirisha na clearing, na kukupa updates."
+      },
+      "delivery": {
+        "title": "Usajili & Makabidhiano",
+        "desc": "Tunakamilisha usajili na kukuletea gari likiwa tayari kuingia barabarani."
+      }
+    },
+    "ctaTitle": "Tuanze Kazi?",
+    "ctaDesc": "Tuma bajeti na aina ya gari unayotaka upate ushauri kwa dakika chache.",
+    "ctaButton": "Anza Hapa"
+  },
+  "why": {
+    "title": "Kwanini Uchague Smart Motorz",
+    "subtitle": "Ushauri wa kitaalamu, uwazi kamili, na huduma ya mwanzo hadi mwisho.",
+    "cta": "Ongea na Mtaalamu",
+    "items": {
+      "experienced": "Mabingwa Wenye Uzoefu. Tuna ujuzi wa kutafuta, kuagiza, na kutoa mikopo. Unapata ushauri wa kweli sio kubahatisha.",
+      "rightCar": "Gari Sahihi, Bei Sahihi. Tunatumia mtandao wetu kupata gari bora kwa bei inayoeleweka bila wewe kuumia.",
+      "transparency": "Uwazi. Bei ziko wazi, ushauri ni wa ukweli, na hakuna gharama za kushtukiza.",
+      "endToEnd": "Kila Kitu Tunafanya Sisi. Kuanzia kutafuta, kuagiza, mikopo, usajili hadi kukukabidhi gari, tunasimamia yote.",
+      "fast": "Kazi ya Haraka. Mchakato wetu unapunguza ucheleweshaji usio na lazima.",
+      "relationships": "Urafiki wa Daima. Hatuishii kukuuzia gari tu. Tuko nawe katika safari yako yote ya umiliki.",
+      "peace": "Amani ya Moyo. Hatukupi gari tu; tunakupa uzoefu mzuri, thamani ya pesa yako, na uhakika."
+    },
+    "footerLine": "Smart Motorz, Gari Sahihi. Bei Sahihi. Bila Kubahatisha."
+  },
+  "services": {
+    "title": "Huduma",
+    "subtitle": "Uagizaji, mikopo, ukodishaji, na msaada wa kiufundi, bila ucheleweshaji wala gharama za ziada.",
+    "why": "Kwanini Smart Motorz",
+    "talk": "Ongea na Mtaalamu",
+    "whatYouGet": "Unachopata",
+    "stripTitle": "Uko tayari kumiliki gari kijanja?",
+    "stripDesc": "Tuambie bajeti na unachopenda. Tutakupendekezea gari sahihi na kusimamia kila kitu.",
+    "stripPrimary": "Ongea na Mtaalamu wa Smart Motorz",
+    "stripSecondary": "Anza Sasa",
+    "items": {
+      "importation": {
+        "title": "Kuagiza Gari",
+        "desc": "Tunatafuta na kuleta magari bora kulingana na unavyotaka kutoka Japan, Germany, Dubai, Singapore, UK na USA. Bei ziko wazi kabisa.",
+        "bullets": [
+          "Ushauri wa gari bora kwa mahitaji yako",
+          "Utafutaji unaolingana na kile unachotaka",
+          "Bei bila siri (hakuna gharama za ujanja)",
+          "Usimamizi wa kazi mwanzo hadi mwisho",
+          "Updates za kila wiki hadi unakabidhiwa gari"
+        ],
+        "cta": "Pata Bei ya Gari"
+      },
+      "loans": {
+        "title": "Mikopo ya Gari",
+        "desc": "Mipango rahisi ya kulipa kidogo kidogo kwa miezi 24–48. Bila dhamana, bila mambo magumu, na masharti yako wazi.",
+        "bullets": [
+          "Anza na kiasi kidogo tu",
+          "Lipia polepole kwa miezi 24–48",
+          "Hauhitaji kutoa dhamana",
+          "Ondoka na gari siku hiyo hiyo (kulingana na vigezo)",
+          "Ratiba ya malipo iliyo wazi"
+        ],
+        "cta": "Omba leo, ondoka na gari siku hiyo"
+      },
+      "inCountry": {
+        "title": "Magari ya Hapa Nchini",
+        "desc": "Unahitaji gari haraka? Tunakuunganisha na wauzaji waaminifu, tunasimamia maongezi, na kukuletea gari bila usumbufu.",
+        "bullets": [
+          "Utafutaji wa haraka hapa Tanzania",
+          "Wauzaji tunaowaamini tu",
+          "Tunakusaidia kupunguza bei (Majadiliano)",
+          "Tunakuletea gari hadi ulipo",
+          "Okoa muda na epuka kutapeliwa"
+        ],
+        "cta": "Ongea na Mtaalamu"
+      },
+      "rentals": {
+        "title": "Kukodisha Magari",
+        "desc": "Ukodishaji wa kitaalamu kwa makampuni na viongozi. Unaweza kukodisha kwa siku, wiki, au muda mrefu tukiwa na huduma bora.",
+        "bullets": [
+          "Magari ya Kishua na SUV (yamefanyiwa service)",
+          "Chagua kukodisha kwa siku, wiki, au mwezi",
+          "Tunakuletea gari + msaada wa barabarani",
+          "Mifumo ya malipo kwa makampuni ipo",
+          "Bima na matengenezo vimejumuishwa"
+        ],
+        "cta": "Weka Nafasi ya Gari Leo"
+      },
+      "afterSales": {
+        "title": "Msaada wa Baadaye (Kwa Wateja Pekee)",
+        "desc": "Ukibeba gari kwetu, unakuwa sehemu ya familia. Tunakupa ushauri wa service, mafundi wa uhakika, na kukuagizia vipuri kutoka Dubai.",
+        "bullets": [
+          "Ushauri wa service na oil bora",
+          "Tunakuelekeza kwa mafundi tunaowaamini",
+          "Timu yetu ya Dubai inatafuta vipuri (parts)",
+          "Unalipia kifaa + usafiri tu. Hakuna faida tunachukua",
+          "Huduma hii ni kwa wateja wetu tu"
+        ],
+        "cta": "Tuulize kuhusu vipuri & msaada"
+      }
+    }
+  },
+  "contact": {
+    "title": "Wasiliana na Smart Motorz",
+    "subtitle": "Uko tayari kumiliki gari kijanja? Tuma bajeti na unachotaka, tutakusaidia kupata gari sahihi na kusimamia kila kitu.",
+    "emailUs": "Tuma Email",
+    "fastestTitle": "Njia ya Haraka",
+    "fastestDesc": "Njia ya haraka zaidi. Tuma bajeti yako na aina ya gari unayotaka.",
+    "openForm": "Anza Sasa",
+    "emailTitle": "Barua Pepe",
+    "emailDesc": "Unapendelea email? Tuma maelezo na tutakujibu.",
+    "phoneTitle": "Simu",
+    "phoneDesc": "Piga simu tuongee moja kwa moja.",
+    "locationTitle": "Ofisi & Muda",
+    "fastQuoteTitle": "Pata bei haraka kwa kutuma hivi:",
+    "fastQuoteDesc": "Bajeti • Gari • Aina ya mafuta • Gear • Muda • Mkoa/Jiji lako.",
+    "viewServices": "Angalia Huduma"
+  },
+  "leadForm": {
+    "title": "Ongea na Mtaalamu",
+    "subtitle": "Jaza taarifa zako na tutakupigia hivi punde.",
+    "fullName": "Jina Kamili",
+    "fullNamePh": "Weka jina lako kamili",
+    "phone": "Namba ya Simu",
+    "phonePrefix": "+255",
+    "phonePh": "mf. 65xxxxxxx",
+    "email": "Barua Pepe (Sio Lazima)",
+    "emailPh": "Weka barua pepe yako",
+    "errors": {
+      "required": "Tafadhali weka jina na namba ya simu.",
+      "failed": "Imeshindikana kutuma. Jaribu tena kidogo."
+    }
+  },
+  "common": {
+    "cancel": "Acha",
+    "submit": "Tuma",
+    "loading": "Inatuma..."
+  }
+}
