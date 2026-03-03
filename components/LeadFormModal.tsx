@@ -101,7 +101,7 @@ I am interested in your services.`;
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4" role="dialog" aria-modal="true">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center px-4" role="dialog" aria-modal="true">
       <button type="button" aria-label="Close" onClick={close} className="absolute inset-0 bg-black/80" />
 
       <div className="relative w-full max-w-xl rounded-3xl border border-white/10 bg-black/70 backdrop-blur-2xl shadow-2xl">
