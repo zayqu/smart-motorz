@@ -263,7 +263,7 @@ export default function AboutPage() {
           </div>
 
           <div className="relative w-full overflow-hidden rounded-3xl border border-white/10">
-            <div className="relative h-[320px] md:h-[420px] lg:h-[520px]">
+            <div className="relative h-80 md:h-105 lg:h-130">
               <Image
                 src="/team/staff.jpg"
                 alt={t("about.team.title")}
