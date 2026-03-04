@@ -250,6 +250,33 @@ export default function AboutPage() {
         </div>
       </section>
 
+          {/* TEAM PHOTO BANNER */}
+      <section className="bg-black">
+        <div className="mx-auto max-w-6xl px-6 pb-16">
+          <div className="mb-6">
+            <h3 className="text-3xl md:text-4xl font-bold">
+              {t("about.team.title")}
+            </h3>
+            <p className="mt-3 text-white/70 max-w-3xl">
+              {t("about.team.desc")}
+            </p>
+          </div>
+
+          <div className="relative w-full overflow-hidden rounded-3xl border border-white/10">
+            <div className="relative h-[320px] md:h-[420px] lg:h-[520px]">
+              <Image
+                src="/team/staff.jpg"
+                alt={t("about.team.title")}
+                fill
+                sizes="100vw"
+                className="object-cover object-[50%_10%]"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-black">
         <div className="mx-auto max-w-6xl px-6 pb-16">

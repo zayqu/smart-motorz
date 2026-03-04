@@ -59,7 +59,7 @@ I am interested in your services.`;
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center px-4">
       <button
         type="button"
         onClick={close}

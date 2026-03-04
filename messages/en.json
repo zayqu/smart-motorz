@@ -386,6 +386,10 @@
         }
       }
     },
+    "team": {
+      "title": "Our Team",
+      "desc": "Professional, consistent service from consultation to delivery, plus ongoing after sales support."
+    },
     "cta": {
       "title": "Ready to own your car the smart way?",
       "desc": "Contact Smart Motorz today. Our team handles everything from sourcing to delivery.",

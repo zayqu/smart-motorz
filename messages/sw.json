@@ -235,6 +235,10 @@
         }
       }
     },
+    "team": {
+      "title": "Timu Yetu",
+      "desc": "Huduma ya kitaalamu na thabiti kuanzia ushauri hadi makabidhiano, pamoja na msaada wa baada ya mauzo."
+    },
     "cta": {
       "title": "Uko tayari kumiliki gari kijanja?",
       "desc": "Wasiliana na Smart Motorz leo. Timu yetu itasimamia kila kitu kuanzia utafutaji hadi unakabidhiwa funguo.",
@@ -253,7 +257,7 @@
       },
       "budget": {
         "title": "Thibitisha Bajeti & Malipo",
-        "desc": "Tunathibitisha gharama zote na mpango wako wa malipo au mkopo."
+        "desc": "Tunathibitsha gharama zote na mpango wako wa malipo au mkopo."
       },
       "secure": {
         "title": "Hakikisha & Uagize",
