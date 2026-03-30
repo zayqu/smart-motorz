@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import AppProviders from "@/components/AppProviders";
 import LeadFormModal from "@/components/LeadFormModal";
 import FloatingLeadButton from "@/components/FloatingLeadButton";
+import { Analytics } from "@vercel/analytics/next";
 
 const siteName = "Smart Motorz";
 const siteUrl = "https://smartmotorz.co.tz";
@@ -104,6 +105,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <FloatingLeadButton />
           <LeadFormModal />
         </AppProviders>
+        <Analytics />
       </body>
     </html>
   );
